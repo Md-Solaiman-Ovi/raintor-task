@@ -22,7 +22,7 @@ This project is a pixel-perfect, responsive React + Tailwind CSS implementation 
 
 ## ⚠️ Limitations / Tradeoffs
 
--⚠️ Partially Completed: Only the Navebar, Hero and WhyChooseME are implemented based on the Figma screenshot.
+-⚠️ Partially Completed: Only the Navebar, Hero and WhyChooseME are implemented based on the Figma design.
 - ⏱ Time Constraint: Couldn’t complete the entire design due to limited time. Further sections like AboutMe, WorkProcess, Footer, etc., are pending.
 
 
