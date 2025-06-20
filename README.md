@@ -48,3 +48,13 @@ This project implements an infinite scrolling user feed in React with TypeScript
 ---
 ⚠️ Limitations & Tradeoffs
 API Endpoint: The provided API https://tech-test.raintor.com/user/GetUsersList may return 404 if unavailable or incorrect. 
+
+## ❗ API Issue – Why Data May Not Show
+
+The provided API endpoint: https://tech-test.raintor.com/user/GetUsersList?take=10&skip=0
+
+returns a `404 Not Found` error, which means no data is received from the server.
+
+This is why the user feed displays: Something went wrong: Request failed with status code 404
+
+
