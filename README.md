@@ -1,4 +1,4 @@
-# Frontend Developer Technical Assessment
+ # Frontend Developer Technical Assessment
 
 ## Setup Instructions
 
@@ -24,4 +24,31 @@ This project demonstrates **real-time GPS location communication** between two u
 - Display powered by **Leaflet (OpenStreetMap)**
 
 ---
+## ⚠️ Known Limitation / Tradeoff
+
+### ❗ Map not showing in production (Vercel)
+
+- In **localhost**, everything works perfectly.
+- But in **production (Vercel)**, the map does **not show**, and only displays:
+
+### 🧠 Why the Map Was Not Showing in Production
+
+#### ❌ Problem
+
+The application worked on localhost but not after deployment to Vercel.
+
+The map never rendered because live location was never received due to SignalR connection failure.
+
+#### ⚠️ Root Cause: CORS Error
+
+Browsers blocked direct requests from `*.vercel.app` to the SignalR hub `https://tech-test.raintor.com/Hub`
+
+SignalR negotiation and WebSocket upgrade failed due to CORS policy on the backend not allowing Vercel domains.
+
+#### Workaround:
+
+- A **Next.js API route** is added (`/api/signalr-proxy`) to bypass CORS for **sending** data from User A.
+- But **receiving** data (User B) still connects directly via WebSocket, which may fail if the server blocks it in production.
+
+> ✅ This setup works on localhost, but due to backend limitations, **real-time updates may not appear on Vercel deployments** unless the SignalR server allows production origins.
 
