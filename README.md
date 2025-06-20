@@ -9,6 +9,23 @@
    pnpm install
    pnpm run dev
 
+# ✅ Task 1 – Developer Portfolio - Homepage UI
+
+This project is a pixel-perfect, responsive React + Tailwind CSS implementation of a Figma design for a personal developer portfolio homepage.
+
+## 🔧 Tech Stack
+
+- React.js, TypeScript, Tailwind CSS 
+- Component-based architecture
+- LocalStorage for theme persistence (Dark/Light mode)
+
+
+
+## ⚠️ Limitations / Tradeoffs
+
+-⚠️ Partially Completed: Only the homepage is implemented based on the Figma screenshot.
+- ⏱ Time Constraint: Couldn’t complete the entire design due to limited time. Further sections like Portfolio, Blog, Footer, etc., are pending.
+
 
 # ✅ Task 2 – Real-Time Location Sharing using React, Leaflet & SignalR
 
