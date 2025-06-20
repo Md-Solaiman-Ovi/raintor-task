@@ -41,7 +41,7 @@ The map never rendered because live location was never received due to SignalR c
 Browsers blocked direct requests from `*.vercel.app` to the SignalR hub `https://tech-test.raintor.com/Hub`
 SignalR negotiation and WebSocket upgrade failed due to CORS policy on the backend not allowing Vercel domains.
 
-# Task 3: Infinite Scroll - User Feed
+# ✅ Task 3: Infinite Scroll - User Feed
 
 This project implements an infinite scrolling user feed in React with TypeScript, fetching paginated user data from an API, using virtualization and graceful loading/error states.
 
