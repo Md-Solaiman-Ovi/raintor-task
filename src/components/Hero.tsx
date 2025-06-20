@@ -3,7 +3,7 @@ import { Button } from "./Button";
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative px-8 py-20 h-full">
+    <section className="relative px-8 py-40 h-full">
       <h2 className="text-4xl md:text-6xl xl:text-[78px] font-bold leading-snug">
         Trusted{" "}
         <span className="bg-black text-white px-2 rounded-xl text-center">

@@ -15,8 +15,12 @@ const ThemeToggle = () => {
   };
 
   return (
-    <button onClick={handleToggle} aria-label="Toggle Theme">
-      {isDark ? "🌙" : "☀️"}
+    <button
+      className="bg-teal-500 py-2 px-2 text-center rounded text-sm"
+      onClick={handleToggle}
+      aria-label="Toggle Theme"
+    >
+      {isDark ? "☀️ Light" : "🌙 Dark"}
     </button>
   );
 };
