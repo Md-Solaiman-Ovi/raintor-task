@@ -46,7 +46,8 @@ SignalR negotiation and WebSocket upgrade failed due to CORS policy on the backe
 This project implements an infinite scrolling user feed in React with TypeScript, fetching paginated user data from an API, using virtualization and graceful loading/error states.
 
 ---
-⚠️ Limitations & Tradeoffs
+
+## ⚠️ Known Limitation / Tradeoff
 API Endpoint: The provided API https://tech-test.raintor.com/user/GetUsersList may return 404 if unavailable or incorrect. 
 
 ## ❗ API Issue – Why Data May Not Show
