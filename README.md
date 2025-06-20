@@ -1,3 +1,20 @@
+# Frontend Developer Technical Assessment
+
+## Setup Instructions
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/raintor-task.git
+   cd raintor-task
+   pnpm install
+   pnpm run dev
+
+
+
+
+
+
+
 # ✅ Task 2 – Real-Time Location Sharing using React, Leaflet & SignalR
 
 This project demonstrates **real-time GPS location communication** between two users using React, Leaflet, and SignalR.
