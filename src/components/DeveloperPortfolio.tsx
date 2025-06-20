@@ -9,7 +9,7 @@ const DeveloperPortfolio: React.FC = () => {
   }, []);
 
   return (
-    <main className="min-h-screen bg-white dark:bg-black text-black dark:text-white">
+    <main className="min-h-screen  dark:bg-black text-black dark:text-white bg-[url(/bg-img.png)] bg-cover w-full">
       <Header />
       <Hero />
     </main>

@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const Header: React.FC = () => {
   const navigate = useNavigate();
   return (
-    <header className="flex items-center justify-between px-8 py-6">
+    <header className="flex items-center justify-between px-8 py-6 bg-[rgba(0,0,0,0.01)] backdrop-blur-md mx-4 rounded-bl-3xl sticky top-0 z-50">
       <h1 className="text-xl font-bold">DEVLOP.ME</h1>
       <div className="flex items-center gap-10">
         <nav className="hidden md:flex space-x-6 text-sm">
