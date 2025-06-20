@@ -1,15 +1,17 @@
 import React from "react";
 import { Button } from "./Button";
 import ThemeToggle from "./ThemeToggle";
+import { useNavigate } from "react-router-dom";
 
 const Header: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <header className="flex items-center justify-between px-8 py-6">
       <h1 className="text-xl font-bold">DEVLOP.ME</h1>
       <nav className="hidden md:flex space-x-6 text-sm">
-        <a href="#" className="hover:underline">
+        <button onClick={() => navigate("/")} className="hover:underline">
           Home
-        </a>
+        </button>
         <a href="#" className="hover:underline">
           About
         </a>
