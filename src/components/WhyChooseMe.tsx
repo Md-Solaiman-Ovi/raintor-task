@@ -19,7 +19,7 @@ const skills = [
 
 const WhyChooseMe: React.FC = () => {
   return (
-    <section className="relative bg-black text-white px-4 md:px-12 py-16 rounded-t-3xl mx-10">
+    <section className="relative bg-black text-white px-4 md:px-12 py-16 rounded-[40px] mx-10">
       <div className="flex justify-between items-start flex-wrap gap-6">
         <div className="space-y-6 max-w-xl">
           <Button className="border-white " variant="outline">

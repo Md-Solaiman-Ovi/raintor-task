@@ -1,9 +1,14 @@
+
 import { useEffect, useRef } from "react";
 import * as signalR from "@microsoft/signalr";
 
-export const useSignalR = (
-  onReceive: (data: { userName: string; lat: number; lon: number }) => void
-) => {
+export type LocationPayload = {
+  userName: string;
+  lat: number;
+  lon: number;
+};
+
+export const useSignalR = (onReceive: (data: LocationPayload) => void) => {
   const connectionRef = useRef<signalR.HubConnection | null>(null);
 
   useEffect(() => {
@@ -12,12 +17,15 @@ export const useSignalR = (
       .withAutomaticReconnect()
       .build();
 
-    connection.on("ReceiveLatLon", onReceive);
+    connection.on("ReceiveLatLon", (data) => {
+      console.log("📡 SignalR received:", data);
+      onReceive(data);
+    });
 
     connection
       .start()
-      .then(() => console.log("SignalR Connected"))
-      .catch((err) => console.error("SignalR Connection Error:", err));
+      .then(() => console.log("✅ SignalR connected"))
+      .catch((err) => console.error("❌ SignalR connection failed:", err));
 
     connectionRef.current = connection;
 
@@ -25,10 +33,4 @@ export const useSignalR = (
       connection.stop();
     };
   }, [onReceive]);
-
-  const sendLocation = (lat: number, lon: number, userName: string) => {
-    connectionRef.current?.invoke("SendLatLon", lat, lon, userName);
-  };
-
-  return { sendLocation };
 };
