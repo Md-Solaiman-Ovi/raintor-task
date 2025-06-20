@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { useSignalR } from "../hooks/useSignalR";
 import iconUrl from "../assets/marker-icon.png";
@@ -25,7 +24,7 @@ const UserB = () => {
   useSignalR((data) => {
     setPosition({ lat: data.lat, lon: data.lon });
   });
-
+  console.log("position :", position);
   return (
     <div className="p-4 bg-green-100 rounded-lg mt-4">
       <h2 className="font-bold text-lg mb-2">User B - Map Viewer</h2>
