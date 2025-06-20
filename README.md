@@ -20,11 +20,10 @@ This project is a pixel-perfect, responsive React + Tailwind CSS implementation 
 - LocalStorage for theme persistence (Dark/Light mode)
 
 
-
 ## ⚠️ Limitations / Tradeoffs
 
--⚠️ Partially Completed: Only the homepage is implemented based on the Figma screenshot.
-- ⏱ Time Constraint: Couldn’t complete the entire design due to limited time. Further sections like Portfolio, Blog, Footer, etc., are pending.
+-⚠️ Partially Completed: Only the Navebar, Hero and WhyChooseME are implemented based on the Figma screenshot.
+- ⏱ Time Constraint: Couldn’t complete the entire design due to limited time. Further sections like AboutMe, WorkProcess, Footer, etc., are pending.
 
 
 # ✅ Task 2 – Real-Time Location Sharing using React, Leaflet & SignalR
@@ -61,7 +60,6 @@ SignalR negotiation and WebSocket upgrade failed due to CORS policy on the backe
 # ✅ Task 3: Infinite Scroll - User Feed
 
 This project implements an infinite scrolling user feed in React with TypeScript, fetching paginated user data from an API, using virtualization and graceful loading/error states.
-
 ---
 
 ## ⚠️ Known Limitation / Tradeoff
@@ -70,9 +68,7 @@ API Endpoint: The provided API https://tech-test.raintor.com/user/GetUsersList m
 ## ❗ API Issue – Why Data May Not Show
 
 The provided API endpoint: https://tech-test.raintor.com/user/GetUsersList?take=10&skip=0
-
 returns a `404 Not Found` error, which means no data is received from the server.
-
 This is why the user feed displays: Something went wrong: Request failed with status code 404
 
 
