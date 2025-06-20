@@ -25,10 +25,3 @@ This project demonstrates **real-time GPS location communication** between two u
 
 ---
 
-## 🚀 Setup Instructions
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/your-username/location-sharing-task2.git
-cd location-sharing-task2
