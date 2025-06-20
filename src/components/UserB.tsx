@@ -3,15 +3,18 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { useSignalR } from "../hooks/useSignalR";
-// import { FaMapMarkerAlt } from "react-icons/fa";
-import icon from "../assets/marker-icon.png";
-import icon2x from "../assets/marker-icon-2x.png";
-import shadow from "../assets/marker-shadow.png";
+import iconUrl from "../assets/marker-icon.png";
+import icon2xUrl from "../assets/marker-icon-2x.png";
+import shadowUrl from "../assets/marker-shadow.png";
 
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: icon2x,
-  iconUrl: icon,
-  shadowUrl: shadow,
+const customIcon = new L.Icon({
+  iconUrl,
+  iconRetinaUrl: icon2xUrl,
+  shadowUrl: shadowUrl,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
 });
 
 const UserB = () => {
@@ -36,7 +39,7 @@ const UserB = () => {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
           />
-          <Marker position={[position.lat, position.lon]}>
+          <Marker position={[position.lat, position.lon]} icon={customIcon}>
             <Popup>Live Location from User A</Popup>
           </Marker>
         </MapContainer>

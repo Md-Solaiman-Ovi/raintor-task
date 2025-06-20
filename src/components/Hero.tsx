@@ -4,7 +4,7 @@ import { Button } from "./Button";
 const Hero: React.FC = () => {
   return (
     <section className="relative px-8 py-20 bg-gradient-to-br from-green-200 via-blue-100 to-lime-200">
-      <h2 className="text-4xl md:text-6xl font-bold leading-snug">
+      <h2 className="text-4xl md:text-6xl xl:text-[78px] font-bold leading-snug">
         Trusted{" "}
         <span className="bg-black text-white px-2 rounded">Partner</span> for{" "}
         <br />
